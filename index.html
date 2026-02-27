@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <div class="blob"></div>
+  <div class="scroll-pregress"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tentang Dava</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="welcomeModal" class="modal-overlay">
+    <div class="modal-content glass">
+        <h3>Tips untuk hp kentang</h3>
+        <p>Untuk pengalaman browsing yang lebih lancar, tidak patah", dan hemat baterai, kami menyarankan untuk menonaktifkan fitur <strong>Glass/Liquid</strong> melalui tombol hijau menyala di navbar, <strong>kalau masalah delay karena foto beresolusi 4k</strong>.</p>
+        <button onclick="closeModal()" class="btn">Siap, Dimengerti!</button>
+    </div>
+</div>
+  
+ <div class="bg-fixed"></div>
+
+<div class="content">
+</div>
+
+<header class="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            
+            <div class="glass-control" onclick="toggleGlassEffect()">
+                <div class="indicator" id="glassIndicator"></div>
+                <span id="glassStatusText">GLASS: ON</span>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <div class="logo">Davaaa</div>
+        </div>
+    </div>
+</header>
+
+<nav class="sidebar">
+    <div class="sidebar-header">
+        <span onclick="toggleMenu()" class="close-btn">&times;</span>
+    </div>
+    <ul class="sidebar-links">
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">Note</a></li>
+        <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
+        <li><a href="#games" onclick="toggleMenu()">Game</a></li>
+        <li><a href="#design" onclick="toggleMenu()">Design</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="sidebar-overlay" onclick="toggleMenu()"></div>
+
+</header>
+<section id="home" class="hero container">
+  <div class="hero-text">
+    <h1>Hallo, saya Davaaa</h1>
+    <img src="pp1.jpg" alt="Foto Dava" class="hero-photo">
+    <p>Student • Beginner designer</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+</section>
+
+<section id="about" class="glass container">
+    <h2>Note</h2>
+    <p>Baru pemula.</p>
+    <p>Butuh kritik saran.</p>
+</section>
+
+<section id="coding" class="glass container">
+    <h2>Coding</h2>
+<div class="coding-grid">
+    <div class="coding-box">Html</div>
+    <div class="coding-box">Css</div>
+    <div class="coding-box">JavaScript</div>
+    <div class="coding-box">Shell</div>
+    <div class="coding-box">Ai</div>
+</div>
+</section>
+
+<section id="games" class="glass container">
+    <h2>My Game</h2>
+    <div class="games-grid">
+        <div class="game-box">
+            <img src="ff.png" alt="Game 1">
+        </div>
+        <div class="game-box">
+            <img src="bs.jpg" alt="Game 2">
+        </div>
+        <div class="game-box">
+            <img src="mc.jpg" alt="Game 3">
+        </div>
+    </div>
+</section>
+
+<section id="design" class="glass container">
+    <h2>Design Graphic</h2>
+    <div class="games-grid">
+        <div class="game-box">
+            <img src="1.jpg" alt="design 1">
+        </div>
+        <div class="game-box">
+            <img src="2.jpg" alt="design 2">
+        </div>
+</section>
+
+<section id="contact" class="glass container">
+    <h2>Contact</h2>
+    <p>Email: -</p>
+    <p>Tik tok: -</p>
+    <p>Instagram: @Davaaa4I</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
