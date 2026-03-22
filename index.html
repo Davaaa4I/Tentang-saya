@@ -1,120 +1,111 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <div class="blob"></div>
-  <div class="scroll-pregress"></div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tentang Dava</title>
+    <title>Davaa | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-  <div id="welcomeModal" class="modal-overlay">
-    <div class="modal-content glass">
-        <h3>Tips untuk hp kentang</h3>
-        <p>Untuk pengalaman browsing yang lebih lancar, tidak patah", dan hemat baterai, kami menyarankan untuk menonaktifkan fitur <strong>Glass/Liquid</strong> melalui tombol hijau menyala di navbar, <strong>kalau masalah delay karena foto beresolusi 4k</strong>.</p>
-        <button onclick="closeModal()" class="btn">Siap, Dimengerti!</button>
-    </div>
-</div>
-  
- <div class="bg-fixed"></div>
+<body class="dark-mode">
 
-<div class="content">
-</div>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">Menu<span>.</span></div>
+            <i data-lucide="x" class="close-icon" onclick="toggleSidebar()"></i>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="javascript:void(0)" onclick="showTab('editing')"><i data-lucide="edit-3"></i> Editing</a>
+            <a href="javascript:void(0)" onclick="showTab('games')"><i data-lucide="gamepad-2"></i> Games</a>
+            <a href="javascript:void(0)" onclick="showTab('coding')"><i data-lucide="code"></i> Coding</a>
+            <a href="javascript:void(0)" onclick="showTab('profile')"><i data-lucide="user"></i> Profil</a>
+        </nav>
+    </aside>
 
-<header class="navbar">
-    <div class="nav-container">
-        <div class="nav-left">
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            
-            <div class="glass-control" onclick="toggleGlassEffect()">
-                <div class="indicator" id="glassIndicator"></div>
-                <span id="glassStatusText">GLASS: ON</span>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <i data-lucide="menu" class="nav-icon" onclick="toggleSidebar()"></i>
+                <div class="logo">Davaaa<span>.</span></div>
+            </div>
+            <div class="nav-right">
+                <i data-lucide="search" class="nav-icon" onclick="toggleSearch()"></i>
+                <div id="themeToggleBtn" class="nav-icon" onclick="toggleTheme()">
+                   <i data-lucide="moon"></i>
+                </div>
             </div>
         </div>
-
-        <div class="nav-right">
-            <div class="logo">Davaaa</div>
+        <div class="search-box" id="searchWrapper">
+            <input type="text" id="searchInput" placeholder="Cari project..." onkeyup="searchProject()">
         </div>
-    </div>
-</header>
+    </nav>
 
-<nav class="sidebar">
-    <div class="sidebar-header">
-        <span onclick="toggleMenu()" class="close-btn">&times;</span>
-    </div>
-    <ul class="sidebar-links">
-        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-        <li><a href="#about" onclick="toggleMenu()">Note</a></li>
-        <li><a href="#coding" onclick="toggleMenu()">Coding</a></li>
-        <li><a href="#games" onclick="toggleMenu()">Game</a></li>
-        <li><a href="#design" onclick="toggleMenu()">Design</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-    </ul>
-</nav>
+    <main class="container">
+        <section id="editing" class="tab-content active">
+            <h2 class="section-title">My Design</h2>
+            <div class="grid-layout">
+                <div class="card"><img src="1.jpg" class="card-img"><div class="card-text"><h3>Car Design</h3></div></div>
+                <div class="card"><img src="2.jpg" class="card-img"><div class="card-text"><h3>Car Design</h3></div></div>
+                <div class="card"><img src="3.jpg" class="card-img"><div class="card-text"><h3>Anime Design</h3></div></div>
+                <div class="card"><img src="4.jpg" class="card-img"><div class="card-text"><h3>In coming</h3></div></div>
+            </div>
+        </section>
 
-<div class="sidebar-overlay" onclick="toggleMenu()"></div>
+        <section id="games" class="tab-content">
+            <h2 class="section-title">My Games</h2>
+            <div class="game-grid">
+                <div class="game-card"><img src="ff.png"><p>Free Fire</p></div>
+                <div class="game-card"><img src="roblox.png"><p>Roblox</p></div>
+                <div class="game-card"><img src="bs.jpg"><p> Blood Strike</p></div>
+                <div class="game-card"><img src="mc.jpg"><p>Magic Chess</p></div>
+            </div>
+        </section>
 
-</header>
-<section id="home" class="hero container">
-  <div class="hero-text">
-    <h1>Hallo, saya Davaaa</h1>
-    <img src="pp1.jpg" alt="Foto Dava" class="hero-photo">
-    <p>Student • Beginner designer</p>
-        <a href="#contact" class="btn">Contact Me</a>
-    </div>
-</section>
+        <section id="coding" class="tab-content">
+            <h2 class="section-title">Coding Projects</h2>
+            <div class="list-container">
+                <div class="list-item"><span>Ini otw selesai</span><i data-lucide="external-link"></i></div>
+                <div class="list-item"><span>Rencana mau di isi ini masih belum selesai</span><i data-lucide="external-link"></i></div>
+            </div>
+        </section>
 
-<section id="about" class="glass container">
-    <h2>Note</h2>
-    <p>Baru pemula.</p>
-    <p>Butuh kritik saran.</p>
-</section>
+        <section id="profile" class="tab-content">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <div class="pic-wrap">
+                        <img src="davaa.jpg" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Davaa'">
+                    </div>
+                    <h1 class="profile-name">Davaaa</h1>
+                </div>
+                <div class="hashtags-right">
+                    <span class="tag">#Designer</span>
+                    <span class="tag">#Web Dev</span>
+                    <span class="tag"></span>
+                </div>
+            </div>
 
-<section id="coding" class="glass container">
-    <h2>Coding</h2>
-<div class="coding-grid">
-    <div class="coding-box">Html</div>
-    <div class="coding-box">Css</div>
-    <div class="coding-box">JavaScript</div>
-    <div class="coding-box">Shell</div>
-</div>
-</section>
+            <h2 class="section-title" style="margin-top:20px">Skill Analytics</h2>
+            <div class="skill-card">
+                <div class="skill-bar">
+                    <div class="skill-label"><span>Editing</span><span>70%</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 70%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label"><span>Gaming</span><span>30%</span></div>
+                    <div class="bar-track"><div class="bar-fill" style="width: 30%"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<section id="games" class="glass container">
-    <h2>My Game</h2>
-    <div class="games-grid">
-        <div class="game-box">
-            <img src="ff.png" alt="Game 1">
-        </div>
-        <div class="game-box">
-            <img src="bs.jpg" alt="Game 2">
-        </div>
-        <div class="game-box">
-            <img src="mc.jpg" alt="Game 3">
-        </div>
-    </div>
-</section>
+    <footer class="bottom-nav">
+        <div class="nav-item active" id="nav-editing" onclick="showTab('editing')"><i data-lucide="edit-3"></i><span>Edit</span></div>
+        <div class="nav-item" id="nav-games" onclick="showTab('games')"><i data-lucide="gamepad-2"></i><span>Game</span></div>
+        <div class="nav-item" id="nav-coding" onclick="showTab('coding')"><i data-lucide="code"></i><span>Code</span></div>
+        <div class="nav-item" id="nav-profile" onclick="showTab('profile')"><i data-lucide="user"></i><span>Profil</span></div>
+    </footer>
 
-<section id="design" class="glass container">
-    <h2>Design Graphic</h2>
-    <div class="games-grid">
-        <div class="game-box">
-            <img src="1.jpg" alt="design 1">
-        </div>
-        <div class="game-box">
-            <img src="2.jpg" alt="design 2">
-        </div>
-</section>
-
-<section id="contact" class="glass container">
-    <h2>Contact</h2>
-    <p>Email: -</p>
-    <p>Tik tok: -</p>
-    <p>Instagram: @Davaaa4I</p>
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
